@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MYV3ADS REGISTRAION FORM</title>
+        <style>
+            *{
+                margin: center;
+                padding: center;
+                box-sizing:border-box;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+            select{
+                cursor:pointer;
+                width: auto;
+                height: auto;
+                border-radius: 0;
+                background-color: rgb(250, 250, 250);
+                box-shadow: 2px 4px 8px #c5c5c5;
+                border: none;
+                outline: none;
+                margin-top: 30px;
+            }
+        </style>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+
+    </head>
+
+    <body>
+       <div class="container">
+        <h2>REGISTRATION FORM</h2>
+        <br>
+         <form id="registrationForm" onsubmit="return validateForm()">
+        <div class="form-container">
+        <form>
+            <div class="input-name">
+                <i class="fa fa-user lock"></i>
+                <input type="text" id="firstname" placeholder="First Name" class="text-name" required>
+                <br>
+                <br>
+                <i class="fa fa-user lock"></i>
+                <input type="text" id="lastname" placeholder="Last Name" class="text-name" required>
+            </div>
+            <span>
+            <br>
+            <div class="input-name">
+                <i class="fa fa-envelope email"></i>
+                <input type="email" id="email" placeholder="Email" class="text-name" required>
+            </div>
+            </span>
+            <br>
+            <div class="input-name">
+                <i class="fa fa-calendar-check-o date"></i>
+                <input type="date" max="2006-01-28" id="dob" placeholder="Date Of Birth" class="text-name" required>
+                
+            </div>
+            <br>
+            <div class="input-name">
+                <i class="fa fa-phone phone"></i>
+                <input type="number" id="phone number" placeholder="Mobile Number" class="text-name" required>
+            </div>
+            <br>
+            <div class="input-name">
+                <i class="fa fa-whatsapp whatsapp"></i>
+                <input type="number" id="whatsapp number" placeholder="Whatsapp Number" class="text-name" required>
+            </div>
+            <br>
+            <div class="input-name">
+              <i class="fa fa-map-marker pin"></i>
+              <input type="number" id="pincode" placeholder="Postal Code" class="text-name" required>
+            </div>
+        </form>
+       </div>
+       <br>
+       <div class="wrapper">
+        <select id="State" class="state" required>
+       <option value="-1">Select State</option>
+       <option value="AN">Andaman Nicobar</option>
+       <option value="AP">Andhra Pradesh</option>
+       <option value="ARP">Arunachal Pradesh</option
+       <option value="AS">Assam</option>
+       <option value="BI">Bihar</option>
+       <option value="CH">Chandigarh</option>
+       <option value="CHH">Chhattisgarh</option>
+       <option value="DNH">Dadra Nagar Haveli</option>
+       <option value="DD">Daman Diu</option>
+       <option value="DL">Delhi</option>
+       <option value="GO">Goa</option>
+       <option value="GU">Gujarat</option>
+       <option value="HA">Haryana</option>
+       <option value="HP">Himachal Pradesh</option>
+       <option value="JK">Jammu Kashmir</option>
+       <option value="JH">Jharkhand</option>
+       <option value="KA">Karnataka</option>
+       <option value="KE">Kerala</option>
+       <option value="LW">Lakshadweep</option>
+       <option value="MP">Madhya Pradesh</option>
+       <option value="MA">Maharashtra</option>
+       <option value="MI">Manipur</option>
+       <option value="ME">Meghalaya</option>
+       <option value="MZ">Mizoram</option>
+       <option value="NA">Nagaland</option>
+       <option value="OD">Odisha</option>
+       <option value="PC">Puducherry</option>
+       <option value="PJ">Punjab</option>
+       <option value="RA">Rajasthan</option>
+       <option value="SI">Sikkim</option>
+       <option value="TN">Tamil Nadu</option>
+       <option value="TE">Telangana</option>
+       <option value="TR">Tripura</option>
+       <option value="UP">Uttar Pradesh</option>
+       <option value="UT">Uttarakhand</option>
+       <option value="WB">West Bengal</option>
+     </select>
+     </div>
+     
+     <div>
+     <select id="City" class="city" required>
+       <option value="-1">Select City</option>
+     </select>
+   </div>
+  
+ 
+   
+   <script>
+     let State_City =[
+       {
+         State:"Andaman Nicobar",
+         code:"AN",
+         City:["Nicobar","North Middle Andaman","South Andaman"]
+       },
+       {
+         State:"Andhra Pradesh",
+         code:"AP",
+         City:["Alliri Sitharama Raju","Anakapalli","Anantapur","Annamayya","Bapatla","Chittoor","East Godavari","Eluru","Gudur","Kadapa","Kakinada","Kona.Seema","Krishna","Kurnool","Manyam","Nandyal","Nellore","NTR","Palnadu","Prakasam","Sri Balaji","Sri Satyasai","Srikakulam","Visakhapatnam","Vizianagaram","West Godavari"]
+       },
+       {
+         State:"Arunachal Pradesh",
+         code:"ARP",
+         City:["Anjaw","Central Siang","Changlang","Dibang Valley","East Kameng","East Siang","Kamle","Kra Daadi","Kurung Kumey","Lepa Rada","Lohit","Longding","Lower Dibang Valley","Lower Siang","Lower Subansiri","Namsai","Pakke Kessang","Shi Yomi","Tawang","Tirap","Upper Siang","Upper Subansiri","West Kameng","West Siang"]
+       },
+       {
+         State:"Assam",
+         code:"AS",
+         City:["Baksa","Barpeta","Biswanath","Bongaigaon","Cachar","Charaideo","Chirang","Darrang","Dhemaji","Dhubri","Dibrugarh","Dima Hasao","Goalpara","Haila Kandi","Hojai","Jorhat","Kamrup","Kamrup Metropolitan","Karbi Anglong","Karimganj","Kokrajhar","Lakhimpur","Majuli","Morigaon","Nagaon","Nalbari","Siva Sagar","Sonitpur","South Salmara-Mankachar","Tinsukia","Udalguri","West Karbi Anglong"]
+       },
+       {
+         State:"Bihar",
+         code:"BI",
+         City:["Araria","Arwal","Aurangabad","Banka","Begusarai","Bhagalpur","Bhojpur","Buxar","Darbhanga","East Champaran","Gaya","Gopalganj","Jamui","Jehanabad","Kaimur","Katihar","Khagaria","Kishanganj","Lakhisarai","Madhepura","Madhubani","Munger","Muzaffarpur","Nalanda","Nawada","Patna","Purnia","Rohtas","Saharsa","Samastipur","Saran","Sheikhpura","Sheohar","Sitamarhi","Siwan","Supaul","Vaishali","West Champaran"]
+       },
+       {
+         State:"Chandigarh",
+         code:"CH",
+         City:["Chandigarh"]
+       },
+       {
+         State:"Chhattisgarh",
+         code:"CHH",
+         City:["Balod","Baloda Bazar","Balrampur","Bastar","Bemetara","Bijapur","Bilaspur","Dantewada","Dhamtari","Durg","Gariaband","Janjgir Champa","Jashpur","Kabirdham","Kanker","Kondagaon","Korba","Koriya","Mahasamund","Mungeli","Narayanpur","Raigarh","Raipur","Rajnandgaon","Sukma","Surajpur","Surguja"]
+       },
+       {
+         State:"Dedra Nagar Haveli",
+         code:"DNH",
+         City:["Dedra Nagar Haveli"]
+       },
+       {
+         State:"Daman Diu",
+         code:"DD",
+         City:["Daman","Diu"]
+       },
+       {
+         State:"Delhi",
+         code:"DL",
+         City:["Central Delhi","East Delhi","New Delhi","North Delhi","North East Delhi","North West Delhi","Shahdara","South Delhi","South East Delhi","South West Delhi"," West Delhi"]
+       },
+       {
+         State:"Goa",
+         code:"GO",
+         City:["North Goa","South Goa"]
+       },
+       {
+         State:"Gujarat",
+         code:"GU",
+         City:["Ahmedabad","Amreli","Anand","Araralli","Banaskantha","Bharuch","Bharnagar","Botad","Chhota Udaipur","Dahod","Dang","Derbhooimi Dwarka","Gandhinagar","Gir Somnath","Jamnagar","Junagadh","Kheda","Kutch","Mahisagar","Mehsana","Morbi","Narmada","Navsari","Panchmahal","Patan","Porbandar","Rajkot","Sabarkantha","Surat","Surendranagar","Tapi","Vadodara","Valsad"]
+       },
+       {
+         State:"Haryana",
+         code:"HA",
+         City:["Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad","Gurugram","Hisar","Jhajjar","Jind","Kaithal","Karnal","Kurukshetra","Mahendragarh","Mewat","Palwal","Panchkula","Panipat","Rewari","Rohtak","Sirsa","Sonipat","Yamunanagar"]
+       },
+       {
+         State:"Himachal Pradesh",
+         code:"HP",
+         City:["Bilaspur","Chamba","Hamirpur","Kangra","Kinnaur","Kullu","Lahaul Spiti","Shimla","Sirmaur","Solan","Una"]
+       },
+       {
+         State:"Jammu Kashmir",
+         code:"JK",
+         City:["Anantnag","Bandipora","Baramulla","Budgam","Doda","Ganderbal","Jammu","Kargil","Kathua","Kishtwar","Kulgam","Kupwara","Leh","Poonch","Pulwama","Rajouri","Ramban","Reasi","Samba","Shopian","Srinagar","Udhampur"]
+       },
+       {
+         State:"Jharkhand",
+         code:"JH",
+         City:["Bokaro","Chatra","Deoghar","Dhanbad","Dumka","East Singhbhum","Garhwa","Giridih","Godda","Gumla","Hazaribagh","Jamtara","Khunti","Koderma","Latehar","Lohardaga","Pakur","Palamu","Ramgrah","Ranchi","Sahebganj","Seraikela Kharsawan","Simdega","West Singhbhum"]
+       },
+       {
+         State:"Karnataka",
+         code:"KA",
+         City:["Bagalkot","Bangalore Rural","Bangalore Urban","Belagavi","Bellary","Bidar","Chamarajanagar","Chikkaballapur","Chikkamagaluru","Chitradurga","Dakshina Kannada","Davanagere","Dharwad","Gadag","Gulbarga","Hassan","Haveri","Kodagu","Kolar","Koppal","Mandya","Mysore","Raichur","Ramanagara","Shimoga","Tumkur","Udupi","Uttara Kannada","Vijayanagara","Vijayapura","Yadgir"]
+       },
+       {
+         State:"Kerala",
+         code:"KE",
+         City:["Alappuzha","Erunakulam","Idukki",,"Kannur","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"]
+       },
+       {
+         State:"Lakshadweep",
+         code:"LW",
+         City:["Lakshadweep"]
+       },
+       {
+         State:"Madhya Pradesh",
+         code:"MP",
+         City:["Agar Malwa","Alirajpur","Anuppur","Ashoknagar","Balaghat","Barwani","Betul","Bhind","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Dindori","Guna","Gwalior","Harda","Hoshangabad","Indore","Jabalpur","Jhabua","Katni","Khandwa","Khargone","Mandla","Mandsaur","Morena","Narsinghpur","Neemuch","Niwari","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar",,"Satna","Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Sidhi","Singrauli","Tikamgarh","Ujjain","Umaria","Vidisha"]
+       },
+       {
+         State:"Maharashtra",
+         code:"MA",
+         City:["Ahmednagar","Akola","Amaravati","Aurangabad","Beed","Bhanadara","Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia","Hingoli","Jalgaon","Jalna","Kolhapur","Latur","Mumbai City","Nagpur","Nanded","Nandurbar","Nashik","Osmanabad","Palghar","Parbhani","Pune","Raigad","Ratnagiri","Sangli","Satara","Sindhudurg","Solapur","Thane","Wardha","Washim","Yavatmal"]
+       },
+       {
+         
+       }
+       ]
+       
+       let Stateselect = document.querySelector('#State');
+       let Cityselect = document.querySelector('#City');
+       
+       Stateselect.onchange = function(){
+         Cityselect.options.length=0;
+         if(Stateselect.value!=-1){
+           for(ele of State_City){
+             if(Stateselect.value == ele.code){
+               let op = document.createElement('option');
+               let City = ele.City;
+               op.value =-1;
+               op.innerText ="Select City";
+               Cityselect.options[0] = op;
+               
+               let i=1;
+           for(City of City){
+             let op = document.createElement('option');
+             op.value = City;
+             op.innerText = City;
+             Cityselect.options[i] = op;
+             i++
+           }
+               
+               
+             }
+           } 
+         }
+       }
+   </script>
+   <br>
+
+            <div class="input-name" id="gender" required>
+              <label style="margin-right: 30px;">Gender : </label>
+                <input type="radio" class="radio-button" name="r1" class="radio-button">
+                <label style="margin-right: 30px;">Male</label>
+                
+                <input type="radio" class="radio-button" name="r1" class="radio-button">
+                <label>Female</label>
+            </div>
+
+<br>
+   <div class="arrow"></div>
+   <div class="input-name">
+        <input type="checkbox" style="margin-right: 10px;" name="check-button" id="checkbox" required>
+        <label>I accept all terms and conditions</label>
+   </div>
+   <br>
+   <a href="success.html">
+   <div class="input-name">
+   <input type="button" class="button" value="Register">
+   </a>
+   <script src="main.js">></script>
+    </body>
+  </html>
